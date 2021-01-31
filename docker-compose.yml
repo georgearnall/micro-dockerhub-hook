@@ -1,7 +1,7 @@
 version: '3'
 services:
   dockerhub:
-    image: georgearnall/dockerhub-hook
+    image: maccyber/micro-dockerhub-hook
     # build: .
     environment:
       - PORT=${PORT}
