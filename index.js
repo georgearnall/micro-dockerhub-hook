@@ -1,12 +1,11 @@
 const { json, send } = require('micro')
-const { parse } = require('url')
 const logger = require('./lib/log')
 const validateReq = require('./lib/validate-req')
 const runScript = require('./lib/run-script')
 
 module.exports = async (req, res) => {
   const hooks = require('./scripts')
-  const { pathname } = await parse(req.url, false) // gets url path
+  const pathname = req.url // gets url path
 
   if (pathname === '/ping') return send(res, 200, 'pong')
 
@@ -21,7 +20,7 @@ module.exports = async (req, res) => {
   logger('debug', `Requesting ${pathname}`)
 
   try {
-    await validateReq({ pathname, payload, hooks }) // validates token and payload
+    validateReq({ pathname, payload, hooks }) // validates token and payload
   } catch (e) {
     logger('err', e.message)
     return send(res, 400, e.message)
