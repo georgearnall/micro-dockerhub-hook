@@ -5,7 +5,7 @@
 ###########################################################
 
 # Setting the base to nodejs 15
-FROM mhart/alpine-node:10
+FROM mhart/alpine-node:15
 
 # Maintainer
 LABEL Jonas Enge

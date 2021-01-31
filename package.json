@@ -4,7 +4,7 @@
   "description": "docker hub webhook",
   "main": "index.js",
   "scripts": {
-    "start": "micro -l tcp://${npm_config_HOST}:${npm_config_PORT}",
+    "start": "micro -l tcp://${npm_config_host}:${npm_config_port}",
     "dev": "micro-dev -H localhost",
     "test": "standard && ava",
     "coverage": "nyc ava",
@@ -30,8 +30,8 @@
   },
   "homepage": "https://github.com/maccyber/micro-dockerhub-hook#readme",
   "devDependencies": {
-    "ava": "2.4.0",
-    "axios": "0.19.0",
+    "ava": "^3.15.0",
+    "axios": "^0.21.1",
     "coveralls": "3.0.5",
     "micro-dev": "3.0.0",
     "nyc": "14.1.1",
