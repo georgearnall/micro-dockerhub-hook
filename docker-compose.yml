@@ -1,7 +1,7 @@
 version: '3'
 services:
   dockerhub:
-    image: maccyber/micro-dockerhub-hook
+    image: georgearnall/dockerhub-hook
     # build: .
     environment:
       - PORT=${PORT}
@@ -10,5 +10,3 @@ services:
     volumes:
       - ./scripts:/src/scripts
       - /var/run/docker.sock:/var/run/docker.sock
-      # Path to docker-compose files who are triggered by scripts:
-      # - /srv:/srv
