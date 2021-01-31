@@ -13,7 +13,7 @@ micro-dockerhub-hook listens to incoming HTTP POST-requests from hub.docker.com 
 
 * Lightweight
 * Pretty simple setup process
-* Can be runned in a docker container
+* Can be run in a docker container
 * Supports updating multiple docker images
 * Scripts can trigger docker or docker-compose
 * Used in production
