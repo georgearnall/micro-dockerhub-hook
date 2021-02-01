@@ -8,9 +8,13 @@
 FROM mhart/alpine-node:15
 
 # Maintainer
-LABEL Jonas Enge
+LABEL Maintainer="Jonas Enge"
 
 #### Begin setup ####
+
+# Installs docker
+COPY --from=docker:latest /usr/local/bin/docker /usr/bin/docker
+COPY --from=docker/compose:alpine-1.28.0 /usr/local/bin/docker-compose /usr/bin/docker-compose
 
 # Extra tools for native dependencies
 # RUN apk add --no-cache make gcc g++ python
